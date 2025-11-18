@@ -1,0 +1,249 @@
+/* Variáveis de Cores (Cores Principais da Empresa) */
+:root {
+    --color-primary: #000000; /* Preto */
+    --color-secondary: #FF6A00; /* Laranja Bronze (pode ser ajustado para um tom mais fiel se necessário) */
+    --color-text-light: #f4f4f4;
+    --color-background-dark: #121212;
+    --color-old-price: #888888;
+}
+
+/* Base e Tipografia */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-secondary);
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #ff9933; /* Um laranja mais claro para o hover */
+}
+
+/* Header */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    background-color: var(--color-background-dark);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 2px solid var(--color-secondary);
+}
+
+.logo {
+    font-size: 1.5em;
+    font-weight: 700;
+    color: var(--color-secondary);
+}
+
+.nav a {
+    margin-left: 20px;
+    font-weight: 600;
+}
+
+.nav-link-icon {
+    border: 1px solid var(--color-secondary);
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+/* Hero Section (Banner Inicial) */
+.hero-section {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 5%;
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('placeholder_background.jpg') no-repeat center center/cover;
+}
+
+.hero-section h1 {
+    font-size: 4em;
+    color: var(--color-secondary);
+    margin-bottom: 10px;
+    letter-spacing: 5px;
+    text-shadow: 0 0 10px var(--color-secondary);
+}
+
+.hero-section h2 {
+    font-size: 2em;
+    font-weight: 300;
+    margin-bottom: 30px;
+}
+
+/* Botão CTA Principal */
+.cta-button {
+    display: inline-block;
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-size: 1.2em;
+    font-weight: 700;
+    margin-top: 20px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff8c30;
+    transform: translateY(-2px);
+    color: var(--color-primary);
+}
+
+.pulse-effect {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255, 106, 0, 0.7); }
+    70% { box-shadow: 0 0 0 20px rgba(255, 106, 0, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(255, 106, 0, 0); }
+}
+
+/* Seção de Promoções */
+.promocoes-section {
+    padding: 60px 5%;
+    text-align: center;
+    background-color: var(--color-background-dark);
+}
+
+.promocoes-section h3 {
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: var(--color-text-light);
+}
+
+.promocao-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.promocao-card {
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-background-dark);
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s, border-color 0.3s;
+}
+
+.promocao-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--color-secondary);
+}
+
+.promocao-card.destaque {
+    border-color: var(--color-secondary);
+    box-shadow: 0 0 20px rgba(255, 106, 0, 0.5);
+}
+
+.promocao-card img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-secondary);
+}
+
+.promocao-card h4 {
+    font-size: 1.4em;
+    color: var(--color-secondary);
+    margin-bottom: 5px;
+}
+
+.promocao-card .descricao {
+    font-style: italic;
+    color: var(--color-text-light);
+    margin-bottom: 15px;
+}
+
+.promocao-card .preco-antigo {
+    text-decoration: line-through;
+    color: var(--color-old-price);
+    font-size: 0.9em;
+}
+
+.promocao-card .preco-novo {
+    font-size: 2em;
+    font-weight: 700;
+    color: #00ff7f; /* Verde para destacar o preço novo */
+    margin-top: 5px;
+}
+
+.secondary-cta {
+    background-color: var(--color-primary);
+    border: 2px solid var(--color-secondary);
+    color: var(--color-secondary);
+}
+
+.secondary-cta:hover {
+    background-color: var(--color-secondary);
+    color: var(--color-primary);
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: var(--color-primary);
+    border-top: 1px solid var(--color-background-dark);
+}
+
+.social-links a {
+    font-size: 1.5em;
+    margin: 0 10px;
+    color: var(--color-text-light);
+    transition: color 0.3s;
+}
+
+.social-links a:hover {
+    color: var(--color-secondary);
+}
+
+/* Responsividade (Para dispositivos móveis) */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+    .nav {
+        margin-top: 10px;
+    }
+    .nav a {
+        margin: 0 10px;
+    }
+    .hero-section h1 {
+        font-size: 3em;
+    }
+    .hero-section h2 {
+        font-size: 1.5em;
+    }
+    .promocao-container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .promocao-card {
+        width: 90%;
+    }
+}
